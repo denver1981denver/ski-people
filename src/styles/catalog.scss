@@ -1,0 +1,58 @@
+.catalog {
+  overflow-y: hidden;
+  padding-bottom: 20px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__link {
+    display: block;
+    color: #969eae;
+    background-color: #eeeff2;
+    padding: 11px 14px 13px;
+    border-radius: 32px;
+    align-content: center;
+    border: 1px solid transparent;
+    transition: all 0.5s linear;
+    outline: none;
+
+    &:focus-visible,
+    &:hover {
+      color: #0044f0;
+      border: 1px solid #0044f0;
+      transition: all 0.1s linear;
+    }
+
+    &:active {
+      background-color: #0044f0;
+      color: #fff;
+      transition: all 0.1s linear;
+    }
+
+    &--active {
+      color: #fff;
+      background-color: #0044f0;
+
+      &:focus-visible,
+      &:hover {
+        color: #fff;
+        background-color: #0044f0;
+      }
+
+      &:active {
+        color: #fff;
+        background-color: #0044f0;
+      }
+    }
+  }
+}

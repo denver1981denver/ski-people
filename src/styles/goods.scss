@@ -1,0 +1,172 @@
+.goods {
+  padding: 40px 0;
+
+  @media (min-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 32px 8px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+    @media (min-width: 768px) {
+      gap: 32px 10px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+      gap: 40px 16px;
+      grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+    }
+
+    @media (min-width: 1440px) {
+      gap: 40px 16px;
+      grid-template-columns: repeat(4, minmax(302px, 1fr));
+    }
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    margin-bottom: 12px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 19px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  &__like-button {
+    position: absolute;
+    content: "";
+    top: 12px;
+    right: 12px;
+    color: #fff;
+    stroke: #1c1c1c;
+    transition: all 0.5s linear;
+
+    &:active svg {
+      color: #0044f0;
+      stroke: #0044f0;
+      transition: all 0.1s linear;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    gap: 18px;
+    color: #1c1c1c;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 37px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 18px;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 400;
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    &-price {
+      font-size: 16px;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__button {
+    border: 1px solid #0044f0;
+    color: #0044f0;
+    border-radius: 32px;
+    padding: 12px 24px;
+    margin-bottom: 40px;
+    transition: all 0.5s linear;
+
+    &:focus-visible,
+    &:hover {
+      background-color: #0044f0;
+      color: #fff;
+      border-color: transparent;
+      transition: all 0.1s linear;
+    }
+
+    &:active {
+      background-color: #fff;
+      color: #0044f0;
+      border-color: #042f9c;
+      transition: all 0.1s linear;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.pagination {
+  width: 200px;
+  margin: 0 auto;
+
+  &__indicator {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  &__counter {
+    color: #1c1c1c;
+  }
+}
